@@ -154,7 +154,7 @@ function processNotification (notif, type) {
 		var repoName = getRepositoryName(notif.repository);
 		var text = typeProcessors[type](notif);
 
-		if (text) {
+		if (text && typeof text === 'string') {
 			return `${repoName}: ${text}`;
 		}
 	}
