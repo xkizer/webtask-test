@@ -157,6 +157,8 @@ function processNotification (notif, type) {
 		if (text && typeof text === 'string') {
 			return `${repoName}: ${text}`;
 		}
+
+		return text;
 	}
 
 	return null;
